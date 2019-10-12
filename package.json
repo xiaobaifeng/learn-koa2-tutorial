@@ -23,5 +23,9 @@
   "homepage": "https://github.com/xiaobaifeng/learn-koa2-tutorial#readme",
   "dependencies": {
     "koa": "^2.8.2"
+  },
+  "devDependencies": {
+    "address": "^1.1.2",
+    "opn": "^6.0.0"
   }
 }
