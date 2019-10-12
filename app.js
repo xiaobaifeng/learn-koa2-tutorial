@@ -19,7 +19,6 @@ app.use(async (ctx, next) => {
 
 app.use(async (ctx, next) => {
 	console.log('中间件2 doSomething')
-	await next()
 	console.log('中间件2 end')
 })
 
