@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/xiaobaifeng/learn-koa2-tutorial#readme",
   "dependencies": {
-    "koa": "^2.8.2"
+    "koa": "^2.8.2",
+    "koa-router": "^7.4.0"
   },
   "devDependencies": {
     "address": "^1.1.2",
