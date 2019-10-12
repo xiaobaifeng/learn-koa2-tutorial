@@ -23,6 +23,7 @@
   "homepage": "https://github.com/xiaobaifeng/learn-koa2-tutorial#readme",
   "dependencies": {
     "koa": "^2.8.2",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0"
   },
   "devDependencies": {
