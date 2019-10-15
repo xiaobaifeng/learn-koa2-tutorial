@@ -24,6 +24,7 @@
   "dependencies": {
     "koa": "^2.8.2",
     "koa-bodyparser": "^4.2.1",
+    "koa-nunjucks-2": "^3.0.2",
     "koa-router": "^7.4.0"
   },
   "devDependencies": {
