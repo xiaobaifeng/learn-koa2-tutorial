@@ -25,7 +25,8 @@
     "koa": "^2.8.2",
     "koa-bodyparser": "^4.2.1",
     "koa-nunjucks-2": "^3.0.2",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
   },
   "devDependencies": {
     "address": "^1.1.2",
