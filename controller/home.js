@@ -1,6 +1,6 @@
 module.exports = {
     index: async(ctx, next) => {
-        ctx.response.body = `<h1>index page</h1>`
+        await ctx.render('home/index')
     },
     home: async(ctx, next) => {
         console.log(ctx.request.query)
@@ -21,10 +21,31 @@ module.exports = {
             name,
             password
         } = ctx.request.body
-        if (name == 'ikcamp' && password == '123456') {
-            ctx.response.body = `Hello， ${name}！`
-        } else {
-            ctx.response.body = '账号信息错误'
+
+        let res 
+        if(name == 'ikcamp' && password == '123456'){
+            res = {
+                status: 0,
+                data: {
+                    title: "个人中心",
+                    content: "欢迎进入个人中心"
+                }
+            }
+        }else{
+            res = {
+                status: -1,
+                data: {
+                    title: '登录失败',
+                    content: "请输入正确的账号信息"
+                }
+            }
+        }
+
+        if(res.status == "-1"){
+            await ctx.render("home/login", res.data)
+        }else{
+            ctx.state.title = "个人中心"
+            await ctx.render("home/success", res.data)
         }
     }
 }
