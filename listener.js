@@ -1,5 +1,5 @@
 const ip = require('ip')
-const opn = require('opn')
+const open = require('open')
 
 
 module.exports = (app) => {
@@ -7,6 +7,6 @@ module.exports = (app) => {
         let localhost = ip.address();
         let url = 'http://' + (localhost || 'localhost') + ':' + '3000';
         console.log('server is running at ', '\033[36;4m' + url + '\033[0m');
-        opn(url);
+        open(url);
     })
 }
