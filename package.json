@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon app.js",
+    "server": "nodemon main.js",
     "deploy": "pm2 deploy production update"
   },
   "engines": {
@@ -33,7 +33,8 @@
     "koa-nunjucks-2": "^3.0.2",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "log4js": "^5.2.2"
+    "log4js": "^5.2.2",
+    "mongoose": "^5.7.12"
   },
   "devDependencies": {
     "nodemon": "^1.19.3",

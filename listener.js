@@ -2,11 +2,12 @@ const ip = require('ip')
 const open = require('open')
 
 
-module.exports = (app) => {
-    app.listen(3000, () => {
+module.exports = (app, port) => {
+
+    app.listen(port, () => {
         let localhost = ip.address();
-        let url = 'http://' + (localhost || 'localhost') + ':' + '3000';
+        let url = 'http://' + (localhost || 'localhost') + ':' + `${port}`;
         console.log('server is running at ', '\033[36;4m' + url + '\033[0m');
-        open(url);
+        // open(url);
     })
 }
